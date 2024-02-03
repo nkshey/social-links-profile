@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: "Inter", sans-serif;
+}
+
+:root {
+   --green: hsl(75, 94%, 57%);
+   --white: hsl(0, 0%, 100%);
+   --gray: hsl(0, 0%, 20%);
+   --dark-gray: hsl(0, 0%, 12%);
+   --off-black: hsl(0, 0%, 8%);
+}
+
+html {
+   font-size: 62.5%;
+}
+
+body {
+   font-size: 1.6rem;
+   color: var(--white);
+   background-color: var(--off-black);
+}
+
+a {
+   text-decoration: none;
+   color: var(--white);
+}
+
+.container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+.card {
+   background-color: var(--dark-gray);
+   padding: 2.4rem;
+   margin: 1.2rem;
+   border-radius: 1.4rem;
+}
+
+.section-author {
+   text-align: center;
+}
+
+img {
+   border-radius: 50%;
+   width: 9.5rem;
+   height: 9.5rem;
+}
+
+h1 {
+   font-weight: 500;
+   margin: 2.4rem 0 1rem 0;
+}
+
+p {
+   font-size: 1.4rem;
+}
+.country {
+   color: var(--green);
+   margin-bottom: 3rem;
+   font-weight: 500;
+}
+
+.description {
+   margin-bottom: 2.6rem;
+   padding: 0 1.1rem;
+   font-weight: 300;
+}
+
+li {
+   list-style: none;
+   text-align: center;
+   margin-bottom: 1.6rem;
+}
+
+li:last-child {
+   margin-bottom: 0;
+}
+
+li a {
+   display: inline-block;
+   width: 100%;
+   font-weight: 600;
+   font-size: 1.4rem;
+   background-color: var(--gray);
+   border-radius: 0.7rem;
+
+   padding: 1.6rem;
+
+   transition: all 0.2s;
+}
+
+li a:hover {
+   background-color: var(--green);
+   color: var(--dark-gray);
+}
+
+/* Changing text to icons on hover */
+.section-links li {
+   position: relative;
+}
+
+.btn:hover span {
+   opacity: 0;
+}
+
+.btn:hover::before {
+   position: absolute;
+   top: 54%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 2.4rem;
+}
+
+.btn-github:hover::before {
+   content: url(assets/svg/github.svg);
+}
+
+.btn-linkedin:hover::before {
+   content: url(assets/svg/linkedin.svg);
+}
+
+.btn-frontendmentor:hover::before {
+   content: url(assets/svg/frontend.svg);
+}
+
+.btn-twitter:hover::before {
+   content: url(assets/svg/twitter.svg);
+}
+
+.btn-instagram:hover::before {
+   content: url(assets/svg/instagram.svg);
+}
+
+/* Making it responsive */
+@media (min-width: 1024px) {
+   html {
+      font-size: 68.75%;
+   }
+
+   .card {
+      width: 41rem;
+      padding: 4.2rem;
+   }
+}
+
+/* Making it responsive for even smaller devices */
+@media (max-width: 350px) {
+   html {
+      font-size: 56.25%;
+   }
+}
