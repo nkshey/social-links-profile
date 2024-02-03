@@ -134,7 +134,7 @@ li a:hover {
 }
 
 .btn-twitter:hover::before {
-   content: url(assets/svg/twitter.svg);
+   content: url(assets/svg/reddit.svg);
 }
 
 .btn-instagram:hover::before {
